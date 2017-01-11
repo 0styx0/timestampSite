@@ -8,7 +8,7 @@ var express = require('express');
         
     var dateUrl, dateString, unixTime;
 
-    if (typeof +url == "String") {
+    if (/[a-zA-Z]/.test(url)) {
         dateUrl = new Date(url);
 
         dateString = dateUrl.toDateString();
